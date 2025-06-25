@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SneakerStore - Tênis Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html"><h1 class="logo">SNEAKER<span>STORE</span></h1></a>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="products.html"><i class="fas fa-store"></i> Produtos</a>
+        <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Checkout -->
+  <!-- Checkout -->
+  <section class="checkout-page">
+    <div class="container">
+      <h2>Finalizar Compra</h2>
+      <form>
+        <!-- Seção de informações pessoais -->
+        <div class="checkout-section">
+          <h3>Informações Pessoais</h3>
+          <div class="form-group">
+            <label>Nome completo*</label>
+            <input type="text" required>
+          </div>
+          <div class="form-group">
+            <label>E-mail*</label>
+            <input type="email" required>
+          </div>
+          <div class="form-group">
+            <label>CPF*</label>
+            <input type="text" required placeholder="000.000.000-00">
+          </div>
+        </div>
+
+        <!-- Seção de endereço -->
+        <div class="checkout-section">
+          <h3>Endereço de Entrega</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>CEP*</label>
+              <input type="text" required placeholder="00000-000">
+            </div>
+            <div class="form-group">
+              <label>Número*</label>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Endereço*</label>
+            <input type="text" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Complemento</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Bairro*</label>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Cidade*</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>Estado*</label>
+              <select required>
+  <option value="">Selecione</option>
+  <option value="AC">Acre</option>
+  <option value="AL">Alagoas</option>
+  <option value="AP">Amapá</option>
+  <option value="AM">Amazonas</option>
+  <option value="BA">Bahia</option>
+  <option value="CE">Ceará</option>
+  <option value="DF">Distrito Federal</option>
+  <option value="ES">Espírito Santo</option>
+  <option value="GO">Goiás</option>
+  <option value="MA">Maranhão</option>
+  <option value="MT">Mato Grosso</option>
+  <option value="MS">Mato Grosso do Sul</option>
+  <option value="MG">Minas Gerais</option>
+  <option value="PA">Pará</option>
+  <option value="PB">Paraíba</option>
+  <option value="PR">Paraná</option>
+  <option value="PE">Pernambuco</option>
+  <option value="PI">Piauí</option>
+  <option value="RJ">Rio de Janeiro</option>
+  <option value="RN">Rio Grande do Norte</option>
+  <option value="RS">Rio Grande do Sul</option>
+  <option value="RO">Rondônia</option>
+  <option value="RR">Roraima</option>
+  <option value="SC">Santa Catarina</option>
+  <option value="SP">São Paulo</option>
+  <option value="SE">Sergipe</option>
+  <option value="TO">Tocantins</option>
+</select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção de Pagamento -->
+        <div class="checkout-section">
+          <h3>Pagamento</h3>
+          
+          <!-- Opções de Pagamento -->
+          <div class="payment-options">
+            <div class="payment-method">
+              <input type="radio" id="pix" name="payment" value="pix" checked>
+              <label for="pix" class="payment-card">
+                <div class="payment-icon">
+                  <i class="fas fa-qrcode"></i>
+                </div>
+                <div class="payment-info">
+                  <h4>PIX</h4>
+                  <p>Pagamento instantâneo com 5% de desconto</p>
+                </div>
+              </label>
+            </div>
+            
+            <div class="payment-method">
+              <input type="radio" id="credit" name="payment" value="credit">
+              <label for="credit" class="payment-card">
+                <div class="payment-icon">
+                  <i class="far fa-credit-card"></i>
+                </div>
+                <div class="payment-info">
+                  <h4>Cartão de Crédito</h4>
+                  <p>Parcelamento em até 12x</p>
+                </div>
+              </label>
+              
+              <!-- Campos do cartão (aparecem quando selecionado) -->
+              <div class="credit-card-fields">
+                <div class="form-group">
+                  <label>Número do Cartão*</label>
+                  <input type="text" placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Validade*</label>
+                    <input type="text" placeholder="MM/AA">
+                  </div>
+                  <div class="form-group">
+                    <label>CVV*</label>
+                    <input type="text" placeholder="000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Nome no Cartão*</label>
+                  <input type="text">
+                </div>
+                <div class="form-group">
+                  <label>Parcelas*</label>
+                  <select>
+                    <option>1x de R$ 100,00</option>
+                    <option>2x de R$ 50,00</option>
+                    <!-- Outras parcelas -->
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-method">
+              <input type="radio" id="boleto" name="payment" value="boleto">
+              <label for="boleto" class="payment-card">
+                <div class="payment-icon">
+                  <i class="fas fa-barcode"></i>
+                </div>
+                <div class="payment-info">
+                  <h4>Boleto Bancário</h4>
+                  <p>Pagamento em até 2 dias úteis</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-large">Finalizar Compra</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (Igual ao index.html) -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

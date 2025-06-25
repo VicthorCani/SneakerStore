@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SneakerStore - Tênis Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html"><h1 class="logo">SNEAKER<span>STORE</span></h1></a>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar tênis...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="products.html" class="active"><i class="fas fa-store"></i> Produtos</a>
+        <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Detalhes do Produto -->
+  <section class="product-details">
+    <div class="container">
+      <div class="product-gallery">
+        <img src="assets/images/nike-air-jordan-1.jpg" alt="Nike Air Jordan 1" id="main-image">
+        <div class="thumbnails">
+          <img src="assets/images/nike-air-jordan-1-side.jpg" alt="Lateral">
+          <img src="assets/images/nike-air-jordan-1-back.jpg" alt="Costas">
+        </div>
+      </div>
+      <div class="product-info">
+        <h2>Nike Air Jordan 1 Retro High</h2>
+        <p class="price">R$ 1.299,90</p>
+        <div class="size-selector">
+          <label>Tamanho:</label>
+          <select>
+            <option>38</option>
+            <option>39</option>
+            <!-- Outros tamanhos -->
+          </select>
+        </div>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+        <div class="description">
+          <h3>Descrição</h3>
+          <p>Tênis icônico da Nike em couro premium, solado de borracha resistente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Igual ao index.html) -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SneakerStore - Tênis Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">SNEAKER<span>STORE</span></h1>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar tênis...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="products.html"><i class="fas fa-store"></i> Produtos</a>
+        <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero Section Atualizada -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>ELEVE SEU ESTILO</h2>
+    <p class="hero-subtitle">Os melhores tênis das marcas premium</p>
+    <a href="products.html" class="hero-btn">VER MAIS</a>
+  </div>
+  <div class="hero-overlay"></div>
+</section>
+
+  <!-- Produtos em Destaque -->
+  <section class="featured">
+    <div class="container">
+      <h3><span>LANÇAMENTOS</span> EM DESTAQUE</h3>
+      <div class="products-grid">
+        <!-- Produto 1 -->
+        <div class="product-card">
+          <img src="assets/images/N.webp" alt="Air Jordan 1">
+          <div class="product-info">
+            <h4>Nike Air Jordan 1</h4>
+            <p class="price">R$ 1.299,90</p>
+            <button class="add-to-cart">COMPRAR</button>
+          </div>
+          <span class="tag-new">NOVO</span>
+        </div>
+        <!-- Produto 2 -->
+        <div class="product-card">
+          <img src="assets/images/Adidas_Superstar.webp" alt="Adidas Superstar">
+          <div class="product-info">
+            <h4>Adidas Superstar</h4>
+            <p class="price">R$ 699,90</p>
+            <button class="add-to-cart">COMPRAR</button>
+          </div>
+        </div>
+        <!-- Produto 3 -->
+        <div class="product-card">
+          <img src="assets/images/Puma_RS-X.avif" alt="Puma RS-X">
+          <div class="product-info">
+            <h4>Puma RS-X</h4>
+            <p class="price">R$ 599,90</p>
+            <button class="add-to-cart">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-section">
+        <h4>SNEAKERSTORE</h4>
+        <p>A melhor seleção de tênis exclusivos.</p>
+      </div>
+      <div class="footer-section">
+        <h4>LINKS</h4>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="#">Contato</a>
+        <a href="#">Políticas</a>
+      </div>
+      <div class="footer-section">
+        <h4>REDES SOCIAIS</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 SneakerStore. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+  // Sistema de redirecionamento da busca para a página de produtos
+  document.querySelector('.search-bar button').addEventListener('click', function () {
+    const searchValue = document.querySelector('.search-bar input').value.trim();
+    if (searchValue !== '') {
+      window.location.href = `products.html?search=${encodeURIComponent(searchValue)}`;
+    } else {
+      window.location.href = 'products.html';
+    }
+  });
+
+  // Permitir busca ao pressionar Enter
+  document.querySelector('.search-bar input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      document.querySelector('.search-bar button').click();
+    }
+  });
+
+   document.addEventListener('DOMContentLoaded', function() {
+    const hero = document.querySelector('.hero');
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Tamanho aleatório entre 2px e 5px
+      const size = Math.random() * 3 + 2;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      
+      // Posição aleatória
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      
+      // Atraso de animação aleatório
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+      
+      hero.appendChild(particle);
+    }
+  });
+</script>
+
+</body>
+</html>

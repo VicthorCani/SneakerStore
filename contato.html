@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SneakerStore - Contato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">SNEAKER<span>STORE</span></h1>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="products.html"><i class="fas fa-store"></i> Produtos</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="contato.html" class="active"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Seção de Contato -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-header">
+        <h2><i class="fas fa-envelope-open-text"></i> Fale Conosco</h2>
+        <p>Tire suas dúvidas ou envie sugestões</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Formulário -->
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Nome*</label>
+              <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-mail*</label>
+              <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <select id="subject">
+                <option value="duvida">Dúvida</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="elogio">Elogio</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensagem*</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+
+        <!-- Informações de Contato -->
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Endereço</h3>
+            <p>Rua Santa Mônica, 68<br>Araquari - Santa Catarina</p>
+          </div>
+          
+          <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Telefone</h3>
+            <p>(47) 9 9986-1467</p>
+          </div>
+          
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>E-mail</h3>
+            <p>sneakerstore@gmail.com</p>
+          </div>
+          
+          <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>Horário</h3>
+            <p>Seg-Sex: 8h-19h<br>Sáb: 10h-16h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.5512332716403!2d-48.804258023765854!3d-26.40568237695304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb60a317b87b3%3A0x87ad83b6e339c0a6!2sR.%20Santa%20M%C3%B4nica%2C%2068%20-%20Itinga%2C%20Araquari%20-%20SC%2C%2089245-000!5e0!3m2!1spt-BR!2sbr!4v1750881048796!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-section">
+        <h4>SNEAKERSTORE</h4>
+        <p>A melhor seleção de tênis exclusivos.</p>
+      </div>
+      <div class="footer-section">
+        <h4>LINKS</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Produtos</a>
+        <a href="about.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="footer-section">
+        <h4>REDES SOCIAIS</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 SneakerStore. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Estilos para a página de contato */
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-header h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .contact-header p {
+      font-size: 1.2rem;
+      color: #777;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .info-card i {
+      font-size: 2rem;
+      color: #e63946;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .info-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .contact-map {
+      width: 100%;
+      height: 400px;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</body>
+</html>
