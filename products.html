@@ -52,7 +52,13 @@
           <div class="product-info">
             <h4>Nike Air Jordan 1</h4>
             <p class="price">R$ 1.299,90</p>
+<<<<<<< HEAD
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+             <button class="add-to-cart">COMPRAR</button>
+
+
             <button class="add-to-cart">COMPRAR</button>
+
           </div>
           <span class="tag-new">LANÇAMENTO</span>
         </div>
@@ -63,6 +69,8 @@
           <div class="product-info">
             <h4>Adidas Superstar</h4>
             <p class="price">R$ 699,90</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+
             <button class="add-to-cart">COMPRAR</button>
           </div>
         </div>
@@ -73,6 +81,9 @@
           <div class="product-info">
             <h4>Puma RS-X</h4>
             <p class="price">R$ 599,90</p>
+
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+
             <button class="add-to-cart">COMPRAR</button>
           </div>
         </div>
@@ -83,6 +94,8 @@
           <div class="product-info">
             <h4>Olympikus Corre 3</h4>
             <p class="price">R$ 349,90</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+
             <button class="add-to-cart">COMPRAR</button>
           </div>
           <span class="tag-sale">-30%</span>
@@ -94,6 +107,10 @@
           <div class="product-info">
             <h4>Nike Dunk Low</h4>
             <p class="price">R$ 899,90</p>
+<<<<<<< HEAD
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+
+
             <button class="add-to-cart">COMPRAR</button>
           </div>
         </div>
@@ -104,6 +121,8 @@
           <div class="product-info">
             <h4>Adidas Stan Smith</h4>
             <p class="price">R$ 599,90</p>
+
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
             <button class="add-to-cart">COMPRAR</button>
           </div>
         </div>
@@ -138,6 +157,86 @@
     </div>
   </footer>
 
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Filtro de produtos
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const productCards = document.querySelectorAll('.product-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filterValue = button.getAttribute('data-filter');
+      productCards.forEach(card => {
+        const cardBrand = card.getAttribute('data-brand');
+        card.style.display = (filterValue === 'all' || cardBrand === filterValue) ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Adicionar IDs únicos aos produtos
+  document.querySelectorAll('.product-card').forEach((card, index) => {
+    if (!card.dataset.id) {
+      card.dataset.id = 'prod-' + (index + 1);
+    }
+  });
+
+  // Botão "Adicionar ao Carrinho"
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      const productCard = this.closest('.product-card');
+      const product = {
+        id: productCard.dataset.id,
+        name: productCard.querySelector('h4').textContent,
+        price: parseFloat(productCard.querySelector('.price').textContent.replace('R$ ', '').replace('.', '').replace(',', '.')),
+        image: productCard.querySelector('img').src,
+        brand: productCard.dataset.brand
+      };
+
+      addToCart(product);
+
+      // Feedback visual
+      const originalText = this.textContent;
+      this.textContent = 'Adicionado!';
+      this.style.backgroundColor = '#4CAF50';
+      setTimeout(() => {
+        this.textContent = originalText;
+        this.style.backgroundColor = '';
+      }, 2000);
+    });
+  });
+
+  updateCartCount();
+});
+
+// Funções globais
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find(item => item.id === product.id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.querySelectorAll('#cart-count').forEach(el => {
+    el.textContent = totalItems;
+  });
+}
+</script>
+=======
   <script src="assets/js/products.js"></script>
+>>>>>>> 89eba8d67cbc2284f02959312e8d26ac1531c9cc
 </body>
 </html>
