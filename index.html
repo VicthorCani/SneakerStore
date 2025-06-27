@@ -11,6 +11,29 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
+<<<<<<< HEAD
+  <div class="container">
+    <div class="navbar-header">
+      <h1 class="logo">SNEAKER<span>STORE</span></h1>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar tênis...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    
+    <div class="nav-links">
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="products.html"><i class="fas fa-store"></i> Produtos</a>
+      <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+      <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+    </div>
+  </div>
+</nav>
+=======
     <div class="container">
       <h1 class="logo">SNEAKER<span>STORE</span></h1>
       <div class="search-bar">
@@ -25,6 +48,7 @@
       </div>
     </div>
   </nav>
+>>>>>>> 89eba8d67cbc2284f02959312e8d26ac1531c9cc
 
 <!-- Hero Section Atualizada -->
 <section class="hero">
@@ -101,6 +125,49 @@
   </footer>
 
   <script>
+<<<<<<< HEAD
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    
+    // Altera o ícone do botão
+    const icon = this.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+  
+  // Fecha o menu quando um link é clicado (para mobile)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 992) {
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+  
+  // Ajusta o menu quando a janela é redimensionada
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 992) {
+      navLinks.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+});
+
   // Sistema de redirecionamento da busca para a página de produtos
   document.querySelector('.search-bar button').addEventListener('click', function () {
     const searchValue = document.querySelector('.search-bar input').value.trim();
